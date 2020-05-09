@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import HeroSection from "../components/Reusable/HeroSection"
-import Infoblock from "../components/Reusable/Infoblock"
+import InfoBlock from "../components/Reusable/InfoBlock"
 import DualInfoBlock from "../components/Reusable/DualInfoBlock"
 import Services from "../components/Services/Services"
 
@@ -18,7 +18,7 @@ const IndexPage = ({ data }) => (
       subtitle=""
       heroclass="services-background"
     />
-    <Infoblock heading="About Us" />
+    <InfoBlock heading="About Us" />
     <DualInfoBlock heading="Message from CTO" />
     <Services />
   </Layout>

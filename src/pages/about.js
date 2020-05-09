@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import HeroSection from "../components/Reusable/HeroSection"
-import Infoblock from "../components/Reusable/Infoblock"
+import InfoBlock from "../components/Reusable/InfoBlock"
 import DualInfoBlock from "../components/Reusable/DualInfoBlock"
 import Teamphotosection from "../components/About/Teamphotosection"
 
@@ -19,7 +19,7 @@ const AboutPage = ({ data }) => (
       heroclass="about-background"
     />
     <DualInfoBlock heading="A message from CEO" />
-    <Infoblock heading="About Vision" />
+    <InfoBlock heading="About Vision" />
     <Teamphotosection />
   </Layout>
 )

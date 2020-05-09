@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import HeroSection from "../components/Reusable/HeroSection"
-import Infoblock from "../components/Reusable/Infoblock"
+import InfoBlock from "../components/Reusable/InfoBlock"
 import DualInfoBlock from "../components/Reusable/DualInfoBlock"
 import Coursecart from "../components/Cart/Coursecart"
 
@@ -18,7 +18,7 @@ const IndexPage = ({ data }) => (
       subtitle="LearnCodeOnline.in"
       heroclass="hero-background"
     />
-    <Infoblock heading="About Us" />
+    <InfoBlock heading="About Us" />
     <Coursecart courses={data.courses} />
     <DualInfoBlock heading="Our team" />
   </Layout>
