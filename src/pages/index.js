@@ -9,6 +9,7 @@ import Infoblock from "../components/Reusable/Infoblock"
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
+
     <HeroSection
       img={data.img.childImageSharp.fluid}
       title="I write Code"
