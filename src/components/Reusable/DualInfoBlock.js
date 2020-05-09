@@ -32,21 +32,21 @@ export default function DualInfoBlock({ heading }) {
           </div>
 
           <div className="col-4">
-            <div class="card bg-dark">
+            <div className="card bg-dark">
               <img
                 src="../../images/nodejs.jpg"
-                class="card-img-top"
+                className="card-img-top"
                 alt="image goes here"
               />
-              <div class="card-body">
-                <h5 class="card-title text-success">Just click photos</h5>
-                <p class="card-text text-white">
+              <div className="card-body">
+                <h5 className="card-title text-success">Just click photos</h5>
+                <p className="card-text text-white">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo
                   facere iste possimus quos ipsum. Atque, debitis necessitatibus
                   provident, eos at possimus nisi aliquam fuga earum
                   consequuntur laboriosam accusantium! In, harum!
                 </p>
-                <Link to="/" class="btn btn-warning btn-block">
+                <Link to="/" className="btn btn-warning btn-block">
                   {heading}
                 </Link>
               </div>
