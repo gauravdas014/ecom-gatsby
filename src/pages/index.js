@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import HeroSection from "../components/Reusable/HeroSection"
+import Infoblock from "../components/Reusable/Infoblock"
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -14,6 +15,7 @@ const IndexPage = ({ data }) => (
       subtitle="LearnCodeOnline.in"
       heroclass="hero-background"
     />
+    <Infoblock heading="About Us" />
   </Layout>
 )
 
