@@ -6,6 +6,41 @@ import { FaCartArrowDown } from "react-icons/fa"
 export default class Navbar extends Component {
   state = {
     navbarState: false,
+    navbarClass: "collapse navbar-collapse",
+    menus: [
+      {
+        id: 1,
+        text: "Home",
+        url: "/",
+      },
+      {
+        id: 2,
+        text: "About",
+        url: "/about",
+      },
+      {
+        id: 3,
+        text: "Services",
+        url: "/services",
+      },
+      {
+        id: 4,
+        text: "Contact",
+        url: "/contact",
+      },
+    ],
+  }
+
+  myToggler = () => {
+    this.state.navbarState
+      ? this.setState({
+          navbarState: false,
+          navbarClass: "collapse navbar-collapse",
+        })
+      : this.setState({
+          navbarState: true,
+          navbarClass: "collapse navbar-collapse show",
+        })
   }
 
   render() {
@@ -14,21 +49,25 @@ export default class Navbar extends Component {
         <Link to="/" className="navbar-brand ml-5">
           <img src={logo} alt="logo goes here" width="40px" />
         </Link>
-        <button className="navbar-toggler" type="button">
+        <button
+          className="navbar-toggler"
+          type="button"
+          onClick={this.myToggler}
+        >
           <span className="text-white">menu</span>
         </button>
-        <div className="collapse navbar-collapse show">
+        <div className={this.state.navbarClass}>
           <ul className="navbar-nav ml-auto mr-5">
-            <li className="nav-item">
-              <Link to="/" className="nav-link text-white">
-                Home
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/" className="nav-link text-white">
-                About Us
-              </Link>
-            </li>
+            {this.state.menus.map(menu => {
+              return (
+                <li key={menu.id} className="nav-item">
+                  <Link to={menu.url} className="nav-link text-white">
+                    {menu.text}
+                  </Link>
+                </li>
+              )
+            })}
+
             <li className="nav-item">
               <Link to="/" className="nav-link text-white">
                 <FaCartArrowDown className="cart-icon" />
