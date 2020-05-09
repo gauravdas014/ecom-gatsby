@@ -17,3 +17,11 @@
 .btn-warning {
   padding: 8px 35px;
 }
+
+.about-background {
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
