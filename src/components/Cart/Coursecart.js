@@ -21,6 +21,9 @@ export default class Coursecart extends Component {
       mycategories: getCate(props.courses.edges),
     }
   }
+
+  catyClicked = categories => {}
+
   render() {
     console.log(this.state.courses)
     return (
@@ -28,7 +31,22 @@ export default class Coursecart extends Component {
         <div className="container">
           <Heading title="Courses" />
           <div className="row my-3">
-            <div className="col-10 mx-auto text-center">{}</div>
+            <div className="col-10 mx-auto text-center">
+              {this.state.mycategories.map((category, index) => {
+                return (
+                  <button
+                    type="button"
+                    className="btn btn-info m-3 px-3"
+                    key={index}
+                    onClick={() => {
+                      this.catyClicked(category)
+                    }}
+                  >
+                    {category}
+                  </button>
+                )
+              })}
+            </div>
           </div>
           <div className="row">
             {this.state.mycourses.map(({ node }) => {
