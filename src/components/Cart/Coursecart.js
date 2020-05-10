@@ -22,7 +22,20 @@ export default class Coursecart extends Component {
     }
   }
 
-  catyClicked = categories => {}
+  catyClicked = category => {
+    let keepItSafe = [...this.state.courses]
+
+    if (category === "all") {
+      this.setState(() => {
+        return { mycourses: keepItSafe }
+      })
+    } else {
+      let holdme = keepItSafe.filter(({ node }) => node.category === category)
+      this.setState(() => {
+        return { mycourses: holdme }
+      })
+    }
+  }
 
   render() {
     console.log(this.state.courses)
