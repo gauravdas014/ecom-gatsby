@@ -17,7 +17,7 @@ const ContactPage = ({ data }) => (
       subtitle=""
       heroclass="about-background"
     />
-    <InfoBlock heading="Hw can we help?" />
+    <InfoBlock heading="How can we help?" />
     <Contact />
   </Layout>
 )
